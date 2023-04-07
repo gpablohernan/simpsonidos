@@ -1,0 +1,697 @@
+:root {
+    --colorPrincipal:#FFD90F;
+  }
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+@font-face {
+    font-family: akbar;
+    src: url(../fonts/akbar.ttf);
+}
+  
+body {
+    font-family: akbar, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #000000;
+}
+
+/*------------ MENÚ PRINCIPAL -----------------*/
+
+.menuPrincipal a{
+    color: #ffffff;
+    margin: .5rem;
+    font-size: 1.2rem;
+}
+
+.menuPrincipal a:hover{
+    color: #000000;
+}
+
+/*---------- IMÁGENES DE FONDO --------------------*/
+
+header{
+    background-image: url(../img/bgheader.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: 100%;
+    padding-bottom: 14rem;
+    position: relative;
+}
+
+.logo {
+    width: 65%;
+    position: absolute;
+    bottom: 0;    
+}
+
+.temporadas{
+    background: url(../img/bgbody.png);
+    padding-bottom: 1.2rem;
+    overflow: hidden;
+}
+
+footer{
+    background-image: url(../img/bgfooter.png);
+    height: 100%;
+}
+
+@media (min-width:768px){
+    header{
+        padding-bottom: 25rem;    
+    }
+  
+    footer{
+        background-position: top center;
+        
+    }
+}
+
+/*------------------- MENU  -------------------*/
+
+.menuMovil{
+    width: 3rem;
+    display: block;
+    float: right;
+    text-align: right;
+    margin-top: .3rem;
+    margin-right: .3rem;
+    cursor: pointer;
+}
+
+.menuMovil span{
+    height: .4rem;
+    margin-bottom: .375rem;
+    background-color: #000000;
+    display: block;
+}
+
+.nombreMenu{
+    display: inline;
+    font-size: 2rem;
+    margin-left: .5rem;
+}
+
+.nombreMenu span{
+    text-decoration: underline;
+}
+
+.temporadas .menuSecundario {
+    background: var(--colorPrincipal);
+    padding-top: 0.3rem;
+    padding-bottom: 1rem;
+}
+
+.temporadas .menuSecundario p{
+    text-align: center;
+}
+
+.temporadas .menuSecundario a{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: #000000;
+    padding: .5rem 0;
+}
+
+.temporadas .menuSecundario .solapasLinks {
+    text-align: center;
+    width: 100%;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: .5rem 0;
+}
+
+.menuPrincipal.visible{
+    display: none;
+}
+
+@media (min-width:768px){
+    .temporadas .menuSecundario .solapasLinks {
+        width: 32.98%;
+        padding: 0;
+    } 
+   
+    .temporadas .menuSecundario .visible {
+        display: none;
+    }
+
+    .menuPrincipal.visible{
+        display: block;
+    }
+
+    .nombreMenu{
+        display: none;
+    }
+
+    .temporadas .menuSecundario a{
+        font-size: 1.75rem;
+    }
+
+    .solapasLinks{
+        font-size: 1.5rem;
+    }
+    
+}
+
+.temporadas .menuSecundario a:hover,
+.temporadas .menuSecundario .solapasLinks:hover,
+.temporadas .menuSecundario .solapasLinks.activo
+{
+    color: #ffffff; 
+}
+
+/*------------------ SECTION ---------------------------*/
+
+.temporadas .bloqueTemporadas {
+    background: var(--colorPrincipal);
+    overflow: hidden;
+    padding-bottom: 2rem; 
+    border-radius: 3.125rem; 
+    margin: 1rem;
+    display: none;
+
+}
+
+.temporadas .bloqueTemporadas p{
+    text-align: center;
+}
+
+.temporadas .bloqueTemporadas.capitulos
+{
+    display: block;
+}
+
+.temporadas .bloqueTemporadas.capitulos h1{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.temporadas .bloqueTemporadas.capitulos caption{
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 0.3rem
+}
+
+.listaCapitulos, tr, td, th{
+    margin: 0 auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 0.1rem;
+    font-size: .8rem;
+}
+
+th{
+    background-color: lightgray;
+}
+
+.tit-tabla{
+    padding: 1rem 0;
+}
+
+.temporadas .bloqueTemporadas .tapas-temporadas h2{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.temporadas .bloqueTemporadas .tapas-temporadas img {
+    display: block;
+    width: 18.50rem;
+    margin: 0 auto;
+    border-radius: 15px; 
+}
+
+
+@media (min-width: 768px){
+    .temporadas .bloqueTemporadas .tapas-temporadas{
+        width: 25%;
+        float: left;
+    }
+
+    .bloqueTemporadas.capitulos .tapas-temporadas{
+        width: 50%;
+        float: left;          
+    }
+    
+    .temporadas .bloqueTemporadas.capitulos{
+        display: block;
+        width: 47.5rem;
+        margin: 1rem auto;
+        padding: 1rem 2rem;
+    }
+
+    .temporadas .bloqueTemporadas .tapas-temporadas h2{
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    .temporadas .bloqueTemporadas .tapas-temporadas img {
+        width: 75%;
+    }
+
+    tr, td, th{
+        margin: 0 auto;
+        font-size: .8rem;
+    }
+}
+
+.contenedorCapitulos{
+    background: var(--colorPrincipal);
+    overflow: hidden;
+    padding-bottom: 2rem;
+    border-radius: 3.125rem;
+    margin: 1rem;
+    display: block;
+    height: 32rem;
+    position: relative;
+}
+
+.bloqueCapitulos img{
+    width: 45%;
+}
+
+.bloqueCapitulos audio{
+    margin: 5% 5%;
+    bottom: 0;
+    width: 90%;
+    padding: 0 2rem;
+    position: absolute;
+}
+
+@media (min-width:768px){
+    .temporadas .bloqueTemporadas .tapas-temporadas img{
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+        transition: all 0.3s ease;
+    }
+
+    .bloqueTemporadas.solapasContenido a:hover{
+        color: #ffffff;
+    }
+
+    .temporadas .bloqueTemporadas .tapas-temporadas img:hover{
+        width: 85%;
+    }
+
+    .temporadas .bloqueTemporadas.capitulos .tapas-temporadas img {
+        width: 20.5rem;              
+    }
+   
+    .contenedorCapitulos{
+        margin: 1%;
+        width: 31%;
+        float: left;
+        padding: 1rem;
+        height: 40rem;  
+    }
+    
+    .bloqueCapitulos img{
+        width: 80%;
+      }
+  
+    .bloqueCapitulos audio{
+        margin: 10% 0%;
+    }
+}
+
+.bloqueCapitulos img{
+    display: block;
+    margin: 2rem auto 0 auto;
+    border-radius: 15px;
+}
+
+.bloqueCapitulos h3{
+    padding: 0 1rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.bloqueCapitulos p{
+    padding: 0 3rem;
+    font-size: .8rem;
+    text-align: justify;
+}
+
+@media (min-width:768px){
+  
+    .bloqueCapitulos h3,
+    .bloqueCapitulos p{
+        text-align: left;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width:560px){
+    .listaCapitulos{
+        width: 18.5rem;
+    }
+}
+
+
+@media (max-width:340px){
+    .temporadas .bloqueTemporadas .tapas-temporadas img{
+        width: 15rem;
+    }
+    
+    .listaCapitulos{
+        width: 15rem;
+    }
+    
+}
+
+tbody tr a:hover{
+    color: #ffffff;
+}
+
+.contenedorLogo404,
+.contenedor404,
+.img404,
+.contenedorPopup,
+.popup,
+.tapas-temporadas img,
+.bloqueTemporadas,
+.bloqueCapitulos img,
+.contenedorCapitulos{
+    -webkit-box-shadow: 10px 10px 10px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 10px -7px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 10px -7px rgba(0,0,0,0.75);
+}
+
+/* ------------------ MENU RESPONSIVO ------------------*/ 
+
+.icon{
+    cursor: pointer;
+}
+
+@media (min-width:768px) {
+    .menuSecundario.menuResp .icon {
+        display: none;
+    }
+}
+  
+@media (max-width:767px){
+    .menuSecundario.menuResp a,
+    .menuSecundario.menuResp button{
+        display: none;
+    }
+    
+    .menuSecundario.menuResp a.icon{
+        display: inline-block;
+        text-align: right;
+        margin-top: -4px;
+    }
+
+  .menuSecundario.menuResp.responsivo {
+        position: relative;
+    }
+
+  .menuSecundario.menuResp.responsivo a.icon {
+        position: absolute;
+        top: 0;
+        margin-left: -7px;
+        left: 0;
+        display: inline-block;
+        text-align: right;
+    }
+  .menuSecundario.menuResp.responsivo a,
+  .menuSecundario.menuResp.responsivo button {
+    float: none;
+    display: block; 
+  }
+}
+
+/* ------------------ BOTÓN IR ARRIBA ------------------*/
+
+#btnIrArriba {
+    display: none;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    z-index: 5;
+    border: none;
+    outline: none;
+    background-image: url(../img/poochie.png);
+    cursor: pointer;
+    width: 9%;
+    height: 17%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+  
+/*------------------ FOOTER -----------------*/
+
+footer form input,
+footer form textarea 
+{
+    width: 100%;
+    margin: .5rem auto;
+    display: block;
+    border-radius: 15px;
+    padding: 1rem;
+    font-size: .8rem;
+}
+
+footer form legend{
+    display: inline;
+    text-align: center;
+    padding-bottom: 1rem;
+    font-size: 1.75rem;
+    margin: 0 auto;
+}
+
+footer form label{
+    display: block;
+    text-align: center;
+
+}
+
+::placeholder{
+    text-align: center;
+}
+
+footer form{
+  padding: .7rem 1rem;
+}
+
+footer p{
+    margin: 0.3rem 3.5rem 0.4rem 1.2rem;
+    font-size: .5rem
+}
+ 
+.btnEnviar{
+    cursor: pointer;
+    font-size: 1rem; 
+}
+
+.btnEnviar:hover{
+    color: #ffffff;
+}
+
+@media (min-width:768px){
+   
+    ::placeholder{
+        text-align: left;
+        font-size: .65rem;
+    }
+    
+    .formularioDividido{
+      float: left; 
+      width: 50%;
+      height: 15rem;
+    }
+    
+    .formularioDividido input{
+        width: 60%;
+        margin: .5rem 3rem;
+        border-radius: 15px;
+        padding: .8rem;
+    }
+
+    .formularioDividido.izq label{
+        text-align: left;
+        margin-left: 3rem;
+    }
+
+    .formularioDividido.der textarea{
+        width: 60%;
+        padding: .8rem;
+        margin-left: 31%;
+    }
+
+    .formularioDividido.der label{
+        text-align: left;
+        margin-left: 31%;
+    }
+
+    .formularioDividido .btnEnviar{
+        width: 26%;
+        margin-left: 65%;
+        margin-top: 1.8rem;
+    }
+    
+    footer p{
+        margin: 0.3rem 3rem 0.4rem 1.2rem;
+        font-size: .5rem;
+    }
+}
+
+/*-------------- TEMPORADAS -------------*/
+
+@media (min-width:768px){
+
+    .temporadas .bloqueTemporadas.T2 .tapas-temporadas img{
+        width: 21.2rem;
+    }
+
+    .temporadas .bloqueTemporadas.T3 .tapas-temporadas img{
+        width: 21.5rem;
+    }
+    
+    .temporadas .bloqueTemporadas.T8 .tapas-temporadas img,
+    .temporadas .bloqueTemporadas.T10 .tapas-temporadas img{
+    width: 21.1rem;
+    }
+    
+    .temporadas .bloqueTemporadas.T11 .tapas-temporadas img{
+        width: 19.84rem;
+    }
+
+    .temporadas .bloqueTemporadas.T12 .tapas-temporadas img{
+        width: 19rem;
+    }
+
+    .T1 th,
+    .T1 td
+    {
+        padding: 0.5rem;
+    }
+
+    .T6 th,
+    .T6 td,
+    .T7 th,
+    .T7 td,
+    .T8 th,
+    .T8 td,
+    .T9 th,
+    .T9 td
+    {
+        font-size: .7rem;
+    }
+
+    .T10 th,
+    .T10 td
+    {
+        font-size: .75rem;
+    }
+
+}
+
+/*-------------------- POPUP --------------------*/
+
+.contenedorPopup{
+    background-image: url(../img/bgbody.png);
+    z-index: 6;
+    width: 100%;
+    position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	align-items: center;
+	justify-content: center;
+	display: none;
+}
+
+.contenedorPopup.active{
+	display: flex;
+}
+
+.contenedorLogo404,
+.contenedor404,
+.popup {
+    background: var(--colorPrincipal);
+    border-radius: 3.125rem;
+    padding: 1.25rem;
+	text-align: center;
+    width: 50%;
+}
+
+.popup h3 {
+    color: #000000;
+    font-size: 1rem;
+}
+
+.btn404,
+#btnCerrarPopup {
+    cursor: pointer;
+    border-radius: 3.125rem;
+    padding: .75rem;
+}
+
+.btn404:hover,
+#btnCerrarPopup:hover {
+    color: #ffffff;
+}
+
+.img404{
+    width: 100%;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 15px;
+}
+
+.logo404{
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.body404{
+    background-image: url(../img/bgbody.png);
+}
+
+.contenedorLogo404,
+.contenedor404{
+    margin: 1rem auto;
+    width: 90%;
+}
+
+.contenedor404 h1{
+    margin: 0;
+    font-size: 6rem;
+}
+
+.contenedor404 h2{
+    margin: 0;
+}
+
+.btn404{
+    margin: .5rem;
+}
+
+.btn404{
+    width: 50%;
+}
+
+@media (min-width:768px){
+    .contenedorLogo404,
+    .contenedor404{
+        width: 50%;
+    }
+
+    .btn404{
+        width: 25%;
+    }
+}
